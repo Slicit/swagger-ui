@@ -332,27 +332,43 @@ table.fullwidth {
 
 #affix-nav{
 	position: fixed;
-	width: 230px;
-	background-color: #e7f0f7;
+	width: 200px;
 	left: 0;
+	z-index: 5;
+	padding-top: 20px;
 }
 #affix-nav p{
 	font-size: 22px;
 }
 
+li.target-h1.active a, li.target-h3.active a, li.target-h3.active a{
+	color: #b94a48 !important;
+	font-weight: bold;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+	text-decoration: none;
+	background-color: inherit !important;
+}
+.nav>li>a {
+	padding: 4px 15px !important;
+}
+
 li.target-h1{
 	font-size: 16px;
+	height: 26px;
 }
 
 li.target-h2{
-	font-size: 16px;
+	font-size: 14px;
 	background-color: #4e87b8;
 	padding: 4px 10px;
-	width: 190px;
+	width: 180px;
 	text-align: center;
 	text-transform: uppercase;
-	margin-top: 6px;
-	margin-bottom: 6px;
+	margin-top: 12px;
+	margin-bottom: 8px;
+	margin-left: 15px;
 }
 
 li.target-h2 a{
@@ -360,13 +376,39 @@ li.target-h2 a{
 }
 
 li.target-h3{
-	font-size: 14px;
-	padding-left: 10px;
+	font-size: 15px;
+	padding-left: 18px;
+	font-style: italic;
 }
 
 li.target-h3 a{
 	color: #424242 !important;
 }
 
-.affix { position: fixed; top: 0; bottom: auto; }
-.affix-bottom { position: fixed; top: auto; bottom: 0; }
+.affix {
+  width: inherit;
+  position: fixed;
+  top: 0;
+}
+.affix-bottom {
+  width: inherit;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+}
+.affix-top {
+}
+
+.content{
+	width: 100%;
+	padding-left: 220px;
+	padding-right: 30px;
+}
+.side-bar-bg{
+	position: fixed;
+	height: 100%;
+	width: 187px;
+	background-color: #e7f0f7;
+	left: 0;
+	top: 0;
+}
