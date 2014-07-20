@@ -34,7 +34,18 @@ function menu(){
 	menu += "";
 	
 	$('#ul-nav').html(menu);
-	$('body').scrollspy({ target: '#affix-nav' });
+	$('body').scrollspy({ target: '#affix-nav', offset: 70 });
+	$('table input, table select').addClass('form-control').css('height', 24).css('padding', 6);
+	$('table select').each(function(){
+		var el = $(this);
+		var options = el .find('option');
+		values = el.parent('td').next('td').find('ul').find('li');
+		if(values != undefined){
+			for(var i=0; i<options.length; i++){
+				$(options.get(i)).html($(values.get(i)).html());
+			}
+		}
+	});
 }
 
 function dirify(s,d) {
